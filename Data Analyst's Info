@@ -1,0 +1,51 @@
+print("Carly's Clippers")
+print(" ") 
+
+hairstyles = ["bouffant", "pixie", "dreadlocks", "crew", "bowl", "bob", "mohawk", "flattop"]
+print("Hairstyles:", hairstyles)
+print(" ")
+
+prices = [30, 25, 40, 20, 20, 35, 50, 35]
+
+last_week = [2, 3, 5, 8, 4, 4, 6, 2]
+
+total_price = 0
+
+print("Original Prices", prices)
+print(" ")
+
+for price in prices:
+  total_price += price
+print("Total for Prices:", total_price)
+print(" ")
+
+average_price = total_price / len(prices)
+
+print("Average Haircut Price:", average_price)
+print(" ")
+
+new_prices = [price - 5 for price in prices]
+print("New Prices, $5 off", new_prices)
+print(" ")
+
+print("Revenue")
+print(" ")
+
+total_revenue = 0
+
+for i in range(len(hairstyles)):
+  total_revenue += prices[i] * last_week[i]
+    
+print("Total Revenue:", total_revenue)
+
+average_daily_revenue = total_revenue / 7
+
+print("Daily Revenue:", average_daily_revenue)
+print(" ")
+
+cuts_under_30 = [hairstyles[i] for i in range(len(new_prices)) if new_prices[i] < 30]
+
+print("Cuts Under $30:", cuts_under_30)
+  
+
+
